@@ -1,0 +1,35 @@
+namespace Homework
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //vars
+            int Num;
+
+            //input
+            Console.WriteLine("input ur sequel");
+            Num = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < Num; i++)
+            {
+                Console.Write(Fibonacci(i)+ " ");
+            }
+        }
+
+        static int Fibonacci(int n)
+        {
+            /*https://en.wikipedia.org/wiki/Fibonacci_sequence
+              F(0) = 0, F(1) = 1*/
+            if (n <= 1)
+            {
+                return n;
+            }
+            else //F(n) = F(n-1) + F(n-2)
+            {
+                return Fibonacci(n - 1) + Fibonacci(n - 2);
+            }
+        }
+
+    }
+}
